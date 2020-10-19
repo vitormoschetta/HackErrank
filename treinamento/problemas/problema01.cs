@@ -29,6 +29,8 @@ namespace treinamento.problemas
             return pairs;
         }
 
+
+
         // Precisamos fazer a tarefa acima, porém manter a lista inicial:
         public int PairsQuantity2()
         {
@@ -44,21 +46,18 @@ namespace treinamento.problemas
 
             while (ar.Count() > 1)
             {
-                var color = ar[0];
-                var items = ar.Where(x => x == color).ToList();
+                var initial = ar[0];
+                var items = ar.Where(x => x == initial).ToList();
 
                 if (items.Count() > 1)
                     pairs = pairs + items.Count / 2;
 
                 foreach (var item in items)
-                {
                     ar.Remove(item);
-                }
             }
-
-            var teste = arCopy;
 
             return pairs;
         }
+
     }
 }
