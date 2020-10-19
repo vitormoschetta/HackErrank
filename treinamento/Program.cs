@@ -23,8 +23,9 @@ namespace treinamento
             //Console.WriteLine(new problema06().countingValleys().ToString());
 
             var problem = new problema07();
-            var difference = problem.diagonalDifference(problem.arr3);
-            Console.WriteLine(difference);
+            var difference = problem.diagonalDifference(problem.arr);
+            var result = (difference != null) ? difference.ToString() : "Matriz não é quadrada";
+            Console.WriteLine(result);
 
 
         }

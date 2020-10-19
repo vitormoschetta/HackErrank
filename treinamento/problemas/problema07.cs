@@ -46,8 +46,8 @@ namespace treinamento.problemas
 
             for (int i = 0; i < arr.Count; i++) // row
             {
-                var a = 0;
-                var b = 0;
+                var controlX = false;
+                var controlY = false;
                 for (int j = 0; j < arr[i].Count; j++) // col
                 {
                     if (i == 0 && j == 0)
@@ -61,17 +61,17 @@ namespace treinamento.problemas
 
                     if (currentRow > 0 && currentRow < numberRows)
                     {
-                        if (j == pontX && a == 0)
+                        if (j == pontX && controlX == false)
                         {
                             sumX = sumX + arr[i][j];
                             pontX++;
-                            a++;
+                            controlX = true;
                         }
-                        if (j == pontY && b == 0)
+                        if (j == pontY && controlY == false)
                         {
                             sumY = sumY + arr[i][j];
                             pontY--;
-                            b++;
+                            controlY = true;
                         }
                     }
                 }
