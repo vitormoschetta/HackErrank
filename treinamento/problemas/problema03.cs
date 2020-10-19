@@ -4,16 +4,17 @@ using System.Linq;
 
 namespace treinamento.problemas
 {
-    // Converte duas strings em array list de inteiro e compara-os dando pontuação para o valor
-    // maior de uma lista em relação a outra na mesma posição da outra lista.
+    // Converte duas strings em array list de inteiro 
+    // Compara item de uma lista com da outra lista na mesma posição
+    // O item maior de uma determinada posição entre as duas lista ganha um ponto para a sua lista    
     public class problema03
     {
         public string stringLIstA;
         public string stringLIstB;
         public problema03()
         {
-            stringLIstA = "5 6 7";
-            stringLIstB = "3 6 10";
+            stringLIstA = "5 6 7 5";
+            stringLIstB = "3 6 10 4";
         }
         public List<int> simpleArraySum()
         {

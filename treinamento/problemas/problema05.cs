@@ -36,5 +36,25 @@ namespace treinamento.problemas
 
             return lista;
         }
+
+
+        public List<string> ImprimeMultiplos2()
+        {
+            var lista = new List<string>();
+
+            for (var i = 1; i <= n; i++)
+            {
+                if ((i % 3) == 0 && (i % 5) == 0)
+                    lista.Add("FizzBuzz");
+                else if ((i % 3) == 0)
+                    lista.Add("Fizz");
+                else if ((i % 5) == 0)
+                    lista.Add("Buzz");
+                else
+                    lista.Add(i.ToString());
+            }
+
+            return lista;
+        }
     }
 }

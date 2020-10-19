@@ -7,9 +7,11 @@ namespace treinamento.problemas
     public class problem01
     {
         public List<int> ar;
+        public int[] array;
         public problem01()
         {
             ar = new List<int>() { 10, 20, 20, 10, 10, 30, 50, 10, 20, 20, 10 };
+            array = new int[] { 10, 20, 20, 10, 10, 30, 50, 10, 20, 20, 10 };
         }
         public int PairsQuantity()
         {
