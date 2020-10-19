@@ -8,7 +8,7 @@ namespace treinamento
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(new problema01_c().PairsQuantity());
+            //Console.WriteLine(new problema01_c().PairsQuantity());
 
             //Console.WriteLine(new problema02().simpleArraySum());
 
@@ -20,7 +20,7 @@ namespace treinamento
 
             //Console.WriteLine(string.Join(" ", new problema05().ImprimeMultiplos()));
 
-
+            Console.WriteLine(new problema06().countingValleys().ToString());
 
 
         }
