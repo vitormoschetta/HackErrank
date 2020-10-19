@@ -20,7 +20,11 @@ namespace treinamento
 
             //Console.WriteLine(string.Join(" ", new problema05().ImprimeMultiplos()));
 
-            Console.WriteLine(new problema06().countingValleys().ToString());
+            //Console.WriteLine(new problema06().countingValleys().ToString());
+
+            var problem = new problema07();
+            var difference = problem.diagonalDifference(problem.arr3);
+            Console.WriteLine(difference);
 
 
         }
