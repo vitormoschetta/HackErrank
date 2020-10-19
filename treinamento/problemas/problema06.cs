@@ -3,18 +3,15 @@ using System.Linq;
 
 namespace treinamento.problemas
 {
-    // steps são o número de passos dados;
     // path representa o caminho => pra cima (U), ou pra baixo (D)
     // o caminhante parte da posição 0 (zero). U = ++, D = --
     // retornar quantas vezes a posição esteve a baixo de 0(zero) depois de retornar pra ele ou subir a cima dele.
     public class problema06
     {
-        int steps;
         string path;
         public problema06()
         {
-            steps = 8;
-            path = "UDDDUDUU";
+            path = "UDDDUDUUDD";
         }
         public int countingValleys()
         {
@@ -23,21 +20,47 @@ namespace treinamento.problemas
 
             for (int i = 0; i < path.Length; i++)
             {
-                if (path.Substring(i, 1) == "U")
-                {
+                var action = path.Substring(i, 1);
+
+                if (action == "U")
                     mark++;
-                }
-                else if (path.Substring(i, 1) == "D")
+                else if (action == "D")
                 {
                     if (mark == 0)
-                    {
                         valleys++;
-                    }
+
                     mark--;
                 }
             }
 
             return valleys;
         }
+
+        public int countingValleys2()
+        {
+            int valleys = 0;
+            int mark = 0;
+
+            for (int i = 0; i < path.Length; i++)
+            {
+                var action = path.Substring(i, 1);
+
+                switch (action)
+                {
+                    case "U":
+                        mark++;
+                        break;
+                    case "D":
+                        if (mark == 0)
+                            valleys++;
+                        mark--;
+                        break;
+                }
+            }
+
+            return valleys;
+        }
+
+
     }
 }
